@@ -16,7 +16,7 @@
 		{{#each data as |dat|}}
 		<div class='col-xs-3'> 
 			<div>
-				{{#link-to 'data'}}
+				{{#link-to 'album' dat.id}}
 				<img height='100px' width='100px' src = '{{dat.artworkUrl100}}'> 
 				<div>{{dat.id}}</div>
 				{{/link-to}}
