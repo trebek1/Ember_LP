@@ -1,3 +1,33 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class='row'>
 
-{{outlet}}
+	<div class='col-xs-2'> 
+	
+		{{link-to 'Albums' 'index'}}
+		something else
+		something else
+		something else
+		something else
+		something else
+		something else
+		something else
+		something else
+	</div> 
+	<div class='col-xs-6'>
+		{{#each data as |dat|}}
+		<div class='col-xs-3'> 
+			<div>
+				{{#link-to 'data'}}
+				<img height='100px' width='100px' src = '{{dat.artworkUrl100}}'> 
+				{{/link-to}}
+	
+
+			</div>
+
+			<br>
+			
+		</div>
+		{{/each}}
+	</div>
+
+	{{outlet}}
+</div>
