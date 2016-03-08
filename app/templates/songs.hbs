@@ -1,0 +1,10 @@
+<div>songs</div>
+
+	{{#each model as |song|}}
+		{{#link-to 'song' this}}
+			<img height='100px' width='100px' src = '{{song.artworkUrl100}}'> 
+			<div>{{song.trackId}}</div>
+		{{/link-to}}
+	{{/each}}
+
+{{outlet}}

@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
-
 var data = {
  "resultCount":50,
  "results": [
@@ -57,12 +56,10 @@ var data = {
 }
 
 
-data.results.forEach(function(album){
-	album.id = album.artistId + album.trackId; 
-})
-
-
-
-export default Ember.Controller.extend({
-	data: data.results
+export default Ember.Route.extend({
+	model: function(){
+		return data.results; 
+	}
 });
+
+
