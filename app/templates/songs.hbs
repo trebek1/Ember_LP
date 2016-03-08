@@ -1,10 +1,15 @@
-<div>songs</div>
 
-	{{#each model as |song|}}
+{{#each model as |song|}}
+	<span class='col-xs-2 container' height="125px" width="125px">
 		{{#link-to 'song' song.trackId}}
-			<img height='100px' width='100px' src = '{{song.artworkUrl100}}'> 
-			<div>{{song.trackId}}</div>
+			<img  src = '{{song.artworkUrl100}}'>
+			<div>
+				<div>{{song.trackCensoredName}}</div>
+			</div>
+			
 		{{/link-to}}
-	{{/each}}
+	</span>
 
-{{outlet}}
+{{/each}}
+
+
