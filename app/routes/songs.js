@@ -25,7 +25,8 @@ export default Ember.Route.extend({
 		console.log('data1 ', data)
 		return data
 
-	}
+	} 
+
 });
 
 

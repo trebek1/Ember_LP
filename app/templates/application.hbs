@@ -14,6 +14,8 @@
 	
 	
 		<div class='col-xs-6'> 
+			  {{input type="text" class="new-band" placeholder="Enter a Band" value=title}}
+      		<button class="btn btn-primary btn-sm new-band-button" {{action "search"}}>Add</button>
 			{{outlet}}			
 		</div>
 		
