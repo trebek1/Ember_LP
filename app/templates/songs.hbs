@@ -1,7 +1,7 @@
 
 {{#each model as |song|}}
 	<span class='col-xs-2 container' height="125px" width="125px">
-		{{#link-to 'song' song.trackId }}
+		{{#link-to 'song' title song.trackId }}
 		
 			<img  src = '{{song.artworkUrl100}}'>
 			<div>

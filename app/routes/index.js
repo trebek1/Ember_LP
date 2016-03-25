@@ -10,7 +10,7 @@ export default Ember.Route.extend({
 			 controller.set('title', '');
 			 var scontroller = this.controllerFor('songs')
 			 scontroller.set('title', title);
-			 this.transitionTo('songs');
+			 this.transitionTo('songs', title);
 
 		}	
 	}
