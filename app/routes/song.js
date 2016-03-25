@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-findAll: function(){
+findAll: function(param){
 		
 		return $.ajax({
-		url: 'https://itunes.apple.com/search?term=linkin+park',
+		url: 'https://itunes.apple.com/search?term=' + param,
 		dataType: 'jsonp',
 		success: function(response){
 			
@@ -20,9 +20,9 @@ findAll: function(){
 	},
 
 	model: function(params) {
-		
+		var coords = this.controllerFor('songs').get('title');
 		var dat
-		var index = this.findAll().then(function(response){
+		var index = this.findAll(coords).then(function(response){
 			
 			response.filter(function(obj){
 				 if(obj.trackId == params.song_trackId){
