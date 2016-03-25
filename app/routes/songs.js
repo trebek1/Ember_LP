@@ -23,9 +23,9 @@ export default Ember.Route.extend({
 	},
 	model: function(params){
 		
-		 var coords = this.controllerFor('songs').get('title');
+		 var title = this.controllerFor('songs').get('title');
 		
-		var data = this.findAll(coords);
+		var data = this.findAll(title);
 		
 		return data
 

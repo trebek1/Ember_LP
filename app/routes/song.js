@@ -21,7 +21,7 @@ findAll: function(param){
 	},
 
 	model: function(params) {
-		console.log("This is params ", params)
+		
 		var coords = this.controllerFor('songs').get('title');
 		var dat
 		var index = this.findAll(coords).then(function(response){
