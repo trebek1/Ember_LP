@@ -8,6 +8,10 @@
 <div> trackId: {{model.trackId}} </div>
 
 <audio id='audio' src="{{model.previewUrl}}" controls volume={{0.5}}></audio>
+<br>
+{{#link-to 'songs' model.artistName }}
+			Go Back to Songs Page
+		{{/link-to}}
 
 {{!-- {
 	"wrapperType":"track", 

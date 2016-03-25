@@ -6,8 +6,6 @@ export default Ember.Route.extend({
 	
 	findAll: function(param){
 		
-		console.log("What is param huur", param)
-		//console.log("This is title2 ", title)
 		return $.ajax({
 		url: 'https://itunes.apple.com/search?term=' + param ,
 		dataType: 'jsonp',
