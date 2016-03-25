@@ -6,7 +6,6 @@ export default Ember.Route.extend({
 			
 			 var controller = this.get('controller');
 			 var title = controller.get('title');
-			 console.log("This is title ", title)
 			 controller.set('title', '');
 			 var scontroller = this.controllerFor('songs')
 			 scontroller.set('title', title);

@@ -7,7 +7,7 @@
 <div> ArtistId: {{model.artistId}} </div>
 <div> trackId: {{model.trackId}} </div>
 
-<audio src="{{model.previewUrl}}" controls></audio>
+<audio id='audio' src="{{model.previewUrl}}" controls volume={{0.5}}></audio>
 
 {{!-- {
 	"wrapperType":"track", 
